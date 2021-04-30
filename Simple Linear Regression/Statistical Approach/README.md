@@ -1,7 +1,7 @@
 # Simple Linear Regression, Statistical Approach
 #### NOTE: This tutorial follows Chapter 12 of the book "Statistics for Management" by Levin, Rubin, Siddiqui and Rastogi
 
-We will start with a simple problem. Suppose you are in charge of an R&D facility of a company, you want to know if there is any relation between the budget of R&D per annum spent by the company and annual profit of the company. You have a feeling that there is a relationship but you don't know how to express it or how to prove it. Maybe even if there is any relation, __from where do you start investigating it? How do you know that you are approaching from the correct direction? How do you validate your approach?__ We will try to find the answers to these questions and for that let's have some data to work upon.
+We will start with a simple problem. Suppose you are in charge of an R&D facility of a company, you want to know if there is any relation between the budget of R&D per annum spent by the company and annual profit of the company. You have a feeling that there is a relationship but you don't know how to express it or how to prove it. Maybe even if there is any relation, __from where do you start investigating it? How do you know that you are approaching from the correct direction? How do you validate your approach? and can you predict the profit in upcoming years if you have the value of the budget for R&D?__ We will try to find the answers to these questions and for that let's have some data to work upon.
 
 | Year | Amount Spent on R&D | Annual Profit  |
 |------|------------|-------------|
@@ -88,4 +88,20 @@ If we put a = 0 (which means the line intercepting the y-axis is at y = 0), then
 You can notice that if the value of a = 0 and the value of b = 2 then the regression line will pass through the points (0, 0) and (1, 2).
 ![RegressionLineExample1](https://user-images.githubusercontent.com/11557572/116720381-bdba8300-a9f9-11eb-906d-53ed44a7e264.png)
 
-Therefore, if the value of y-intercept is "a" and the value of the slope is "b" then the regression line will pass through the points (0, a) and (1, b)
+Therefore, __if the value of y-intercept is "a" and the value of the slope is "b" then the regression line will pass through the points (0, a) and (1, b)__.
+
+### What to do with a Regression line, actual values and predicted values?
+We are going to find that regression that fits our data the best. And we validate the fitness of our regression line by using __Least-square error__. Our original data is 
+
+| Amount Spent on R&D | Annual Profit  |
+|------------|-------------|
+| 2 | 20 |
+| 3 | 25 |
+| 5 | 34 |
+| 4 | 30 |
+| 11 | 40 |
+| 5 | 31 |
+
+(in millions)
+
+And we need to predict 

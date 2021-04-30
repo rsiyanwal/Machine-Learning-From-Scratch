@@ -86,7 +86,12 @@ If we put a = 0 (which means the line intercepting the y-axis is at y = 0), then
 ![slope](https://user-images.githubusercontent.com/11557572/116714957-e3448e00-a9f3-11eb-9a3b-8ee927c561ed.gif)
 
 You can notice that if the value of a = 0 and the value of b = 2 then the regression line will pass through the points (0, 0) and (1, 2).
+
 ![RegressionLineExample1](https://user-images.githubusercontent.com/11557572/116720381-bdba8300-a9f9-11eb-906d-53ed44a7e264.png)
+
+and if a = 1.5 and b = 0.5
+
+![RegressionLineExample2](https://user-images.githubusercontent.com/11557572/116735543-493d0f80-aa0c-11eb-9747-6343e310f893.png)
 
 Therefore, __if the value of y-intercept is "a" and the value of the slope is "b" then the regression line will pass through the points (0, a) and (1, b)__.
 

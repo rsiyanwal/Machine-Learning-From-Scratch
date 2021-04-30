@@ -72,3 +72,20 @@ Regression is used for prediction. We are trying to predict the annual profit on
 ![DirectRelationPredicted (1)](https://user-images.githubusercontent.com/11557572/116697485-dcf8e680-a9e0-11eb-9a91-ee79347aea4b.png)
 
 In this graph, x-axis represents independent variable and y-axis represents dependent variable. For the value 6 of independent variable, our Actual Value (blue line) is between 15 to 20 whereas our Estimated or Predicted value (black line) by our Regression Line is between 20 to 25. If thi was the graph of our R&D budget and Annual Profit problem, it would have meant that our actual profit is between 15 to 20 million at R&D budget of 6 million. Whereas, our prediction is telling us that our profit is between 20 to 25 million at R&D budget of 6 million.  
+
+### A Regression Line
+A simple line in 2D plane is represented by the equation __Y = a + bX__ where __a__ is the y-intercept and __b__ is a slope. 
+To understand the regression line we need to undestand what Y and X are and what "a" and "b" are. X is the Independent Variable, Y is the Predicted Value, a is the point at which the regression line intercepts the y-axis and b is the slope. 
+
+Let's talk about y-intercept or a. We are putting b = 0 so that the line is parallel to x-axis. "a" is the value at which the regression line intercepts the y-axes. If a = 1 then the regression line will cross at y = 1 and if a = 5 then the regression line will cross at y = 5. Below is the graph depicting a at the various values between -2 and 4.
+
+![y-intercept](https://user-images.githubusercontent.com/11557572/116717860-fc9b0980-a9f6-11eb-9d81-6b1caf7f3dcb.gif)
+
+If we put a = 0 (which means the line intercepting the y-axis is at y = 0), then we can see how b is working as a slope. In the graph below the value of b is ranging from -10 to 10. If b = 0 then the regression line is parallel to x-axis, if b = 1 then the regression line will intercept the point (1, 1) and if b = 6 then the regression line will intercept at the point (1, 6).
+
+![slope](https://user-images.githubusercontent.com/11557572/116714957-e3448e00-a9f3-11eb-9a3b-8ee927c561ed.gif)
+
+You can notice that if the value of a = 0 and the value of b = 2 then the regression line will pass through the points (0, 0) and (1, 2).
+![RegressionLineExample1](https://user-images.githubusercontent.com/11557572/116720381-bdba8300-a9f9-11eb-906d-53ed44a7e264.png)
+
+Therefore, if the value of y-intercept is "a" and the value of the slope is "b" then the regression line will pass through the points (0, a) and (1, b)

@@ -50,13 +50,25 @@ Moving on, we have a gut feeling that there is a relation between the budget of 
 
 ![R D Annual Profit](https://user-images.githubusercontent.com/11557572/116685830-956a5e80-a9d0-11eb-9399-26b77c2052a1.png)
 
-It looks like you were right all along. There is a clear relationship between annual R&D budget and annual profit, as our R&D budget is increasing our Profit is increasing (Positive Relationship). Instead of plotting a scatter graph and try to find a relationship between two variables using our caveman eyes, we have a better way as well which is called __Chi-square test__. It tells us wheather there is a relationship but it doesn't tell us what kind of a relationship it is. As of now, we are interested in what kind of the relationship it is. We will be leaving Chi-square test for later tutorials. 
+It looks like you were right all along. There is a clear relationship between annual R&D budget and annual profit, as our R&D budget is increasing our Profit is increasing (Direct Relationship). Instead of plotting a scatter graph and try to find a relationship between two variables using our caveman eyes, we have a better way as well which is called __Chi-square test__. It tells us wheather there is a relationship but it doesn't tell us what kind of a relationship it is. As of now, we are interested in what kind of the relationship it is. We will be leaving Chi-square test for later tutorials. 
 
-The kind of relationship we are studying here is called __Regression__ but what is Regression? 
+The relationship can either be a positive one or a negative one. The positive one is called as __Direct Relationship__ in which the value of dependent variable increases are value of independent variable increases. Another one which represents a negative relationship is called __Inverse Relationship__ in which the value of dependent variable decreases as the value of independent variable increases.  
+
+![DirectRelationship](https://user-images.githubusercontent.com/11557572/116692808-94d6c580-a9da-11eb-8d0f-907b0e38be41.png)        ![InverseRelationship](https://user-images.githubusercontent.com/11557572/116692485-0d895200-a9da-11eb-918e-35dc326d9fe7.png)
+
+The type of relationship we are studying here is called __Regression__ (in which there can exist either a direct relationship or an inverse relationship) but what is Regression? 
 
 > The term regression was first used as a statistical concept in 1877 by Sir Francis Galton. Galton made a study that showed that the height of children born to tall parents tends to move back, or "regress," towards the mean height of the population. _He designated the word __regression__ as the name of the general process of predicting one variable (the height of the children) from another (the height of the parent)_. -- Statistics for Management, Page number 596
 
+__The Regression can also be of many types, they are as follow:__
 
-There are two kinds of relationship, either a positive one or a negative one. The positive one is called as __Direct Relationship__ in which the value of dependent variable increases are value of independent variable increases. Another one which represents a negative relationship is called __Inverse Relationship__ in which the value of dependent variable decreases as the value of independent variable increases.  
+![Types_of_Regression](https://user-images.githubusercontent.com/11557572/116693574-c0a67b00-a9db-11eb-87df-965685949fd5.png)
 
-![DirectRelationship](https://user-images.githubusercontent.com/11557572/116692808-94d6c580-a9da-11eb-8d0f-907b0e38be41.png)        ![InverseRelationship](https://user-images.githubusercontent.com/11557572/116692485-0d895200-a9da-11eb-918e-35dc326d9fe7.png)
+
+As you may have notices by now, we are learning Simple Linear Regression and so we will be dealing with Direct Linear Regression and Invesrse Linear Regression. The word "Simple" in Simple Linear Regression means that we are only considering two variables (or features). 
+
+Regression is used for prediction. We are trying to predict the annual profit on the basis of amount spent on R&D. Linear Regression tries to predict the dependent variable by __"fitting"__ a __straight line__ between the scattered points. Later on, a point on the straight line given on some value of independent variable is called as __Estimated Value or Predicted Value__. For Example, examine the graph below in which a Regression line (in pink) is already implemented
+
+![DirectRelationPredicted (1)](https://user-images.githubusercontent.com/11557572/116697485-dcf8e680-a9e0-11eb-9a91-ee79347aea4b.png)
+
+In this graph, x-axis represents independent variable and y-axis represents dependent variable. For the value 6 of independent variable, our Actual Value (blue line) is between 15 to 20 whereas our Estimated or Predicted value (black line) by our Regression Line is between 20 to 25. If thi was the graph of our R&D budget and Annual Profit problem, it would have meant that our actual profit is between 15 to 20 million at R&D budget of 6 million. Whereas, our prediction is telling us that our profit is between 20 to 25 million at R&D budget of 6 million.  

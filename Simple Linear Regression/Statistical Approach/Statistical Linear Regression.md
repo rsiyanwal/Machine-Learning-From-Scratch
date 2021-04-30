@@ -1,1 +1,0 @@
-# Statistical Linear Regression

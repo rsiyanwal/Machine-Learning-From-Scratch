@@ -93,7 +93,7 @@ and if a = 1.5 and b = 0.5
 
 ![RegressionLineExample2](https://user-images.githubusercontent.com/11557572/116735543-493d0f80-aa0c-11eb-9747-6343e310f893.png)
 
-Therefore, __if the value of y-intercept is "a" and the value of the slope is "b" then the regression line will pass through the points (0, a) and (1, b)__.
+Therefore, __if the value of y-intercept is "a" and the value of the slope is "b" then the regression line will pass through the points (0, a) and (1, b + a)__.
 
 ### What to do with a Regression line, actual values and predicted values?
 We are going to find that regression that fits our data the best. And we validate the fitness of our regression line by using __Least-square error__. Our original data is 
@@ -109,4 +109,7 @@ We are going to find that regression that fits our data the best. And we validat
 
 (in millions)
 
-And we need to predict 
+And we need to predict the value of dependent variable as accurately as possible. The values of a and b can vary and depending upon the decimal value of a and b we are taking, there can be millions of combinations. Here is the scatter plot of the data we are working on and few examples of regression lines..
+
+![variousRegressionLines](https://user-images.githubusercontent.com/11557572/116736740-ea789580-aa0d-11eb-8bb0-7c4bf51bf200.png)
+

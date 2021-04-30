@@ -113,3 +113,13 @@ And we need to predict the value of dependent variable as accurately as possible
 
 ![variousRegressionLines](https://user-images.githubusercontent.com/11557572/116736740-ea789580-aa0d-11eb-8bb0-7c4bf51bf200.png)
 
+We need to find a way to judge these lines and figure out which one is the best and least-square error helps us with that. Let's take one example as see how least-square error works. 
+
+| Y | Y'| (Y - Y')^2 |
+|---|---| ---------- |
+| 4 | 5 | 1 |
+| 7 | 4 | 9 |
+| 2 | 3 | 1 |
+|---|---|Sum = 11|
+
+In the example above, the sum of squares of the Predicted Values (Y') subtracted from Actual Values (Y) is 11. The example may have used some values of a and b and evaluated Predicted Value (Y') for each of the data points. If we have tens of thousands of values for a and b then we will have that many 

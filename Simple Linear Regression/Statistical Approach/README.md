@@ -34,3 +34,20 @@ It doesn't mean that __Amount Spent on R&D__ is inherently an independent variab
 **_In Machine Learning, we can only have one Dependent Variable but we can have more than one Independent Variables._**  
 
 Moving on, we have a gut feeling that there is a relation between the budget of R&D and the annual profit but where do we start investigating it? Maybe, we should start by plotting a graph, a scatter plot would be nice. 
+
+    # -- Importing the Libraries --
+    import matplotlib.pyplot as plt
+
+    # -- Defining X and Y --
+    x = [2, 3, 5, 4, 11, 5]
+    y = [20, 25, 34, 30, 40, 31]
+
+    # -- Plotting --
+    plt.xlabel("Amount Spent on R&D")
+    plt.ylabel("Annual Profit")
+    plt.scatter(x, y)
+    plt.show()
+
+![R D Annual Profit](https://user-images.githubusercontent.com/11557572/116685830-956a5e80-a9d0-11eb-9399-26b77c2052a1.png)
+
+It looks like you were right all along. There is a clear relationship between annual R&D budget and annual profit, as our R&D budget is increasing our Profit is increasing too. Instead of plotting a scatter graph and try to find a relationship between two variables using our caveman eyes, we have a better way as well which is called __Chi-square test__. It tells us wheather there is a relationship but it doesn't tell us what kind of a relationship it is. As of now, we are interested in what kind of the relationship it is. We will be leaving Chi-square test for later tutorials. 

@@ -122,4 +122,23 @@ We need to find a way to judge these lines and figure out which one is the best 
 | 2 | 3 | 1 |
 |---|---|Sum = 11|
 
-In the example above, the sum of squares of the Predicted Values (Y') subtracted from Actual Values (Y) is 11. The example may have used some values of a and b and evaluated Predicted Value (Y') for each of the data points. If we have tens of thousands of values for a and b then we will have that many 
+In the example above, the sum of squares of the Predicted Values (Y') subtracted from Actual Values (Y) is 11. The example may have used some values of a and b and evaluated Predicted Value (Y') for each of the data points. If we have tens of thousands of values for a and b then we will have that many __hypothesis__ to check. 
+
+A set of hypothesis to try may look like this: 
+
+1. Y = 0.1 + 0.1X
+2. Y = 0.1 + 0.2X
+3. Y = 0.1 + 0.3X
+100. Y = 0.2 + 0.1X
+2000. Y = 2.1 + 0.3X
+n. Y = b + mx
+
+Of course, we can't go through all the millions of cobinations of a and b because that's not feasible, instead __Statistical Approach__ gives us two formulae to calculate the values of a and b on which we will have the minimum least-square error out of all the hypothesis. 
+
+![slopeFormula](https://user-images.githubusercontent.com/11557572/116779688-61a53c80-aa95-11eb-8f37-1677020b3f3b.png)
+
+
+
+
+
+

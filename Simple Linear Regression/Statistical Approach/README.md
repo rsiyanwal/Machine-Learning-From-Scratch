@@ -129,9 +129,9 @@ A set of hypothesis to try may look like this:
 1. Y = 0.1 + 0.1X
 2. Y = 0.1 + 0.2X
 3. Y = 0.1 + 0.3X
-100. Y = 0.2 + 0.1X
-2000. Y = 2.1 + 0.3X
-n. Y = b + mx
+4. Y = 0.2 + 0.1X
+5. Y = 2.1 + 0.3X
+(...and many more)
 
 Of course, we can't go through all the millions of cobinations of a and b because that's not feasible, instead __Statistical Approach__ gives us two formulae to calculate the values of a and b on which we will have the minimum least-square error out of all the hypothesis. 
 

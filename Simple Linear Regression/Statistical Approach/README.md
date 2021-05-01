@@ -137,8 +137,97 @@ Of course, we can't go through all the millions of cobinations of a and b becaus
 
 ![slopeFormula](https://user-images.githubusercontent.com/11557572/116779688-61a53c80-aa95-11eb-8f37-1677020b3f3b.png)
 
+![y-intercept](https://user-images.githubusercontent.com/11557572/116779835-4d157400-aa96-11eb-8b61-9d45a4090a26.png)
+
+![formulae](https://user-images.githubusercontent.com/11557572/116782764-a090bd80-aaa8-11eb-9d85-a2abfdc66303.png)
+
+Alright, so since we have the formulae and we have an understanding of why we need to use them, let's write a code and implement a __Simple Linear Regression using Statistical Approach__
+
+__Defining the Data:__
+
+            # -- We are denoting Independent Variable as x2 and Dependent Variable as y2 --
+            x2 = [11, 10, 8, 5, 9, 9, 7, 3, 11, 8, 7, 2, 9, 8, 6, 3]
+            y2 = [40, 31, 26, 16, 39, 32, 20, 14, 35, 28, 26, 11, 36, 29, 17, 18]
+          
+__Performing the Least-square method:__
+
+            # -- Mean of the values of Independent Variables --
+            sum = 0
+            for i in x2:
+              sum = sum + i
+            len_x = len(x2)
+            mean_x = sum / len_x
+            print("Mean of Independent Variable: ", mean_x)
+           
+            # -- Mean of the values of Dependent Variables --
+            sum = 0
+            for i in y2:
+              sum = sum + i
+            len_y = len(y2)
+            mean_y = sum / len_y
+            print("Mean of Dependent Variable: ", mean_y)
+            
+            # -- Sum of X*Y --
+            sum_xy = 0
+            xy_list = []
+            for i in range(0, lengthX - 1):
+              xy_list.append(x2[i] * y2[i])
+            print(xy_list)
+            for i in range(0, lengthX - 1):
+              sum_xy = sum_xy + xy_list[i]
+            print("Sum of xy is: ", sum_xy)
+
+            # -- n * mean_x * mean_y --
+            n_mean_x_mean_y = len(x2) * mean_x * mean_y
+            print(n_mean_x_mean_y)
+
+            # -- Sum of square of the values of independent variable --
+            sum_sq_x = 0
+            sq_x = []
+            for i in range(0, lengthX):
+              sq_x.append(x2[i] ** 2)
+            print("sq x: ", sq_x)
+            for i in range(0, lengthX):
+              sum_sq_x = sum_sq_x + sq_x[i]
+            print(sum_sq_x)
+
+            # -- square of the mean of dependent variable * n --
+            n_mean_x_sq = len(x2) * (mean_x ** 2)
+            print(n_mean_x_sq)
+
+            # -- Slope (b) of the regression line --
+            b = (sum_xy - n_mean_x_mean_y)/(sum_sq_x - n_mean_x_sq)
+            print("Slope(b or m) of the regression line is: ", b)
+
+            # -- y-intercept (c) of the regression line is --
+            a = mean_y - b * mean_x
+            print("Y-intercept (a or c) is: ", a)
+
+__Drawing a Regression Line:__
+
+            # -- Importing the Libraries --
+            import matplotlib.pyplot as plt
+            
+            # -- Drawing regression line --
+            x3 = []
+            y3 = []
+            for i in range(2, 12):
+              x3.append(i)
+            for i in range(0, 10):
+              y3.append((b * x3[i]) + a)
+
+            print(x3)
+            print(y3)
+            # -- Plotting --
+            plt.scatter(x2, y2, c = '#88c999')
+            plt.plot(x3, y3, c = 'hotpink')
+            plt.title("Simple Linear Regression")
+            plt.show()
 
 
+![SLR](https://user-images.githubusercontent.com/11557572/116783822-91ad0980-aaae-11eb-987b-7b2325293a78.png)
+
+We have understood how to perform Simple Linear Regression using Statisitcal Approach. In our next topic we will discuss how to perform Simple Linear Regression using __Gredient Descent Method__.
 
 
 

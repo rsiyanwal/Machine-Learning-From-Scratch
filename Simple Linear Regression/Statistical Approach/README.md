@@ -1,7 +1,11 @@
 # Simple Linear Regression, Statistical Approach
 #### NOTE: This tutorial follows Chapter 12 of the book "Statistics for Management" by Levin, Rubin, Siddiqui and Rastogi
 
-We will start with a simple problem. Suppose you are in charge of an R&D facility of a company, you want to know if there is any relation between the budget of R&D per annum spent by the company and annual profit of the company. You have a feeling that there is a relationship but you don't know how to express it or how to prove it. Maybe even if there is any relation, __from where do you start investigating it? How do you know that you are approaching from the correct direction? How do you validate your approach? and can you predict the profit in upcoming years if you have the value of the budget for R&D?__ We will try to find the answers to these questions and for that let's have some data to work upon.
+Let's consider a dataset that includes the annual budget spent by the company on R&D and the corresponding annual profit made by the company. We can start by visualizing this data and checking if there is any pattern or trend in the data. We can use statistical techniques like correlation analysis and regression analysis to determine if there is a relationship between the two variables.
+
+To validate our approach, we can use cross-validation techniques and measure the performance of our model on unseen data. We can also use hypothesis testing to check the significance of our findings.
+
+If we have a model that can predict the profit based on the budget spent on R&D, we can use it to make predictions for upcoming years. However, we should keep in mind that the accuracy of our predictions may vary based on various factors like changes in the market, competition, economic conditions, etc.
 
 | Year | Amount Spent on R&D | Annual Profit  |
 |------|------------|-------------|
@@ -14,7 +18,7 @@ We will start with a simple problem. Suppose you are in charge of an R&D facilit
 
 (in millions)
 
-Now, there is a question, __does the year have any impact on the problem that we are working on?__ Our problem is about the relation between the R&D budget and the Profit but we are not concerned about the year. Maybe in some different problem we want to know if there is any relationship between the year and the profit and maybe we find some relation too, but for now we are only concerned with R&D budget and the Profit. Hence, we will only deal with just these two features and our data should look like this --
+We need to ask ourselves whether the year has any influence on the problem at hand. Our task is to examine the connection between the R&D budget and the profit, and we are not interested in the year. Although in a different problem, we may be interested in discovering any association between the year and the profit, and we may even identify one. However, for now, we are solely interested in the R&D budget and the profit. Therefore, we will only consider these two features, and our data should appear as follows --
 
 | Amount Spent on R&D | Annual Profit  |
 |------------|-------------|
@@ -27,13 +31,11 @@ Now, there is a question, __does the year have any impact on the problem that we
 
 (in millions)
 
-This is an opportuinity to understand what are __Dependent Variable__ and __Independent variable__. Let's recall our problem, we want to know if there is any relationship between ammount spend on R&D and Profit of the company on annual basis. What are we inffering? We are thinking that if we increase the budget of R&D per annum then our annual profit may increase and if we decrease our R&D budget per annum then our annual profit will decrease. Here, __Annual Profit__ is a Dependent Variable because it depends on the value of budget of R&D. Whereas, __Amount Spent on R&D__ is an Independent variable because we are assuming that its value is not depending upon the value of any other variable. 
+In order to understand the concepts of Dependent Variable and Independent Variable, let us consider our problem statement. We want to determine whether there is a relationship between the amount spent on R&D and the annual profit of a company. Our assumption is that increasing the budget for R&D per annum may lead to an increase in annual profit, and decreasing the budget may lead to a decrease in annual profit. Here, Annual Profit is the dependent variable as it depends on the value of the R&D budget. On the other hand, Amount Spent on R&D is the independent variable as its value is not influenced by any other variable.
 
-It doesn't mean that __Amount Spent on R&D__ is inherently an independent variable. If our problem statement was different and we wanted to know if our budget of R&D has incresed or decreased per year then __Amount Spent on R&D__ would have been dependent variable and __Year__ would have been an independent variable. 
+It is important to note that the independence or dependence of a variable is not inherent, but depends on the specific problem being studied. For instance, if we wanted to determine whether the budget for R&D has increased or decreased per year, then Amount Spent on R&D would be the dependent variable and Year would be the independent variable.
 
-**_In Machine Learning, we can only have one Dependent Variable but we can have more than one Independent Variables._**  
-
-Moving on, we have a gut feeling that there is a relation between the budget of R&D and the annual profit but where do we start investigating it? Maybe, we should start by plotting a graph, a scatter plot would be nice. 
+In machine learning, we typically have one dependent variable and one or more independent variables. To investigate whether there is a relationship between the R&D budget and annual profit, we can start by plotting a scatter plot.
 
     # -- Importing the Libraries --
     import matplotlib.pyplot as plt

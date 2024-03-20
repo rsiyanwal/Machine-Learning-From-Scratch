@@ -1,11 +1,11 @@
 # Simple Linear Regression, Statistical Approach
 #### NOTE: This tutorial follows Chapter 12 of the book "Statistics for Management" by Levin, Rubin, Siddiqui and Rastogi
 
-Let's consider a dataset that includes the annual budget spent by the company on R&D and the corresponding annual profit made by the company. We can start by visualizing this data and checking if there is any pattern or trend in the data. We can use statistical techniques like correlation analysis and regression analysis to determine if there is a relationship between the two variables.
+Let's consider a dataset that includes the annual budget spent by the company on R&D and the corresponding annual profit made by the company. We can start by visualizing this data to check if there is any pattern or trend. We can use statistical techniques like correlation analysis and regression analysis to determine if there is a relationship between the two variables.
 
 To validate our approach, we can use cross-validation techniques and measure the performance of our model on unseen data. We can also use hypothesis testing to check the significance of our findings.
 
-If we have a model that can predict the profit based on the budget spent on R&D, we can use it to make predictions for upcoming years. However, we should keep in mind that the accuracy of our predictions may vary based on various factors like changes in the market, competition, economic conditions, etc.
+If we have a model that can predict profit based on the budget spent on R&D, we can use it to make predictions for upcoming years. However, we should keep in mind that the accuracy of our predictions may vary based on various factors, such as changes in the market, competition, and economic conditions.
 
 | Year | Amount Spent on R&D | Annual Profit  |
 |------|------------|-------------|
@@ -18,7 +18,7 @@ If we have a model that can predict the profit based on the budget spent on R&D,
 
 (in millions)
 
-We need to ask ourselves whether the year has any influence on the problem at hand. Our task is to examine the connection between the R&D budget and the profit, and we are not interested in the year. Although in a different problem, we may be interested in discovering any association between the year and the profit, and we may even identify one. However, for now, we are solely interested in the R&D budget and the profit. Therefore, we will only consider these two features, and our data should appear as follows --
+We need to ask ourselves whether the year has any influence on the problem at hand. Our task is to examine the connection between the R&D budget and profit, and we are not interested in the year. Although, in a different problem, we might be interested in discovering any association between the year and profit, and we may even identify one. However, for now, our focus is solely on the R&D budget and profit. Therefore, we will only consider these two features, and our data should be presented as follows. --
 
 | Amount Spent on R&D | Annual Profit  |
 |------------|-------------|
@@ -33,7 +33,7 @@ We need to ask ourselves whether the year has any influence on the problem at ha
 
 In order to understand the concepts of Dependent Variable and Independent Variable, let us consider our problem statement. We want to determine whether there is a relationship between the amount spent on R&D and the annual profit of a company. Our assumption is that increasing the budget for R&D per annum may lead to an increase in annual profit, and decreasing the budget may lead to a decrease in annual profit. Here, Annual Profit is the dependent variable as it depends on the value of the R&D budget. On the other hand, Amount Spent on R&D is the independent variable as its value is not influenced by any other variable.
 
-It is important to note that the independence or dependence of a variable is not inherent, but depends on the specific problem being studied. For instance, if we wanted to determine whether the budget for R&D has increased or decreased per year, then Amount Spent on R&D would be the dependent variable and Year would be the independent variable.
+It is important to note that the independence or dependence of a variable is not inherent but depends on the specific problem being studied. For instance, if we wanted to determine whether the budget for R&D has increased or decreased per year, then Amount Spent on R&D would be the dependent variable and Year would be the independent variable.
 
 In machine learning, we typically have one dependent variable and one or more independent variables. To investigate whether there is a relationship between the R&D budget and annual profit, we can start by plotting a scatter plot.
 
@@ -52,10 +52,9 @@ In machine learning, we typically have one dependent variable and one or more in
 
 ![R D Annual Profit](https://user-images.githubusercontent.com/11557572/116685830-956a5e80-a9d0-11eb-9399-26b77c2052a1.png)
 
-It looks like you were right all along. There is a clear relationship between annual R&D budget and annual profit, as our R&D budget is increasing our Profit is increasing (Direct Relationship). Instead of plotting a scatter graph and try to find a relationship between two variables using our caveman eyes, we have a better way as well which is called __Chi-square test__. It tells us wheather there is a relationship but it doesn't tell us what kind of a relationship it is. As of now, we are interested in what kind of the relationship it is. We will be leaving Chi-square test for later tutorials. 
+It looks like you were right all along. There is a clear relationship between annual R&D budget and annual profit, as our R&D budget is increasing, our Profit is increasing (Direct Relationship). Instead of plotting a scatter graph and trying to find a relationship between two variables using our caveman eyes, we have a better way as well, which is called __Chi-square test__. It tells us whether there is a relationship but it doesn't tell us what kind of a relationship it is. As of now, we are interested in what kind of the relationship it is. We will be leaving the Chi-square test for later tutorials.
 
-The relationship can either be a positive one or a negative one. The positive one is called as __Direct Relationship__ in which the value of dependent variable increases are value of independent variable increases. Another one which represents a negative relationship is called __Inverse Relationship__ in which the value of dependent variable decreases as the value of independent variable increases.  
-
+The relationship can either be a positive one or a negative one. The positive one is called a Direct Relationship in which the value of the dependent variable increases as the value of the independent variable increases. Another one, which represents a negative relationship, is called an Inverse Relationship, in which the value of the dependent variable decreases as the value of the independent variable increases.
 ![DirectRelationship](https://user-images.githubusercontent.com/11557572/116692808-94d6c580-a9da-11eb-8d0f-907b0e38be41.png)        ![InverseRelationship](https://user-images.githubusercontent.com/11557572/116692485-0d895200-a9da-11eb-918e-35dc326d9fe7.png)
 
 The type of relationship we are studying here is called __Regression__ (in which there can exist either a direct relationship or an inverse relationship) but what is Regression? 
@@ -67,13 +66,13 @@ __The Regression can also be of many types, they are as follow:__
 ![Types_of_Regression](https://user-images.githubusercontent.com/11557572/116693574-c0a67b00-a9db-11eb-87df-965685949fd5.png)
 
 
-As you may have notices by now, we are learning Simple Linear Regression and so we will be dealing with Direct Linear Regression and Invesrse Linear Regression. The word "Simple" in Simple Linear Regression means that we are only considering two variables (or features). 
+As you may have noticed by now, we are learning Simple Linear Regression, and so we will be dealing with Direct Linear Regression and Inverse Linear Regression. The word "Simple" in Simple Linear Regression means that we are considering only two variables (or features).
 
-Regression is used for prediction. We are trying to predict the annual profit on the basis of amount spent on R&D. Linear Regression tries to predict the dependent variable by __"fitting"__ a __straight line__ between the scattered points. Later on, a point on the straight line given on some value of independent variable is called as __Estimated Value or Predicted Value__. For Example, examine the graph below in which a Regression line (in pink) is already implemented
+Regression is used for prediction. We are trying to predict the annual profit based on the amount spent on R&D. Linear Regression tries to predict the dependent variable by __fitting__ a __straight line__ among the scattered points. Later on, a point on the straight line, given some value of the independent variable, is known as the __Estimated Value__ or __Predicted Value__. For example, examine the graph below in which a Regression line (in pink) is already implemented.
 
 ![DirectRelationPredicted (1)](https://user-images.githubusercontent.com/11557572/116697485-dcf8e680-a9e0-11eb-9a91-ee79347aea4b.png)
 
-In this graph, x-axis represents independent variable and y-axis represents dependent variable. For the value 6 of independent variable, our Actual Value (blue line) is between 15 to 20 whereas our Estimated or Predicted value (black line) by our Regression Line is between 20 to 25. If thi was the graph of our R&D budget and Annual Profit problem, it would have meant that our actual profit is between 15 to 20 million at R&D budget of 6 million. Whereas, our prediction is telling us that our profit is between 20 to 25 million at R&D budget of 6 million.  
+In this graph, the x-axis represents the independent variable, and the y-axis represents the dependent variable. For the value of 6 of the independent variable, our Actual Value (blue line) is between 15 to 20, whereas our Estimated or Predicted value (black line) by our Regression Line is between 20 to 25. If this was the graph of our R&D budget and Annual Profit problem, it would mean that our actual profit is between 15 to 20 million at an R&D budget of 6 million. Whereas, our prediction is telling us that our profit is between 20 to 25 million at an R&D budget of 6 million.
 
 ### A Regression Line
 A simple line in 2D plane is represented by the equation __Y = a + bX__ where __a__ is the y-intercept and __b__ is a slope. 

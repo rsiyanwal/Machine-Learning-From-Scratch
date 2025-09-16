@@ -55,3 +55,25 @@ flowchart LR
     TimeML --> LSTM["Advanced: LSTM / RNN (if lots of data)"]
 
 ```
+
+
+```mermaid
+flowchart TD
+    subgraph Preprocessing [Data Preprocessing]
+    direction LR
+        A1["Importing the libraries<br/>(Step 1)"] --> 
+        A2["Importing the dataset<br/>(Step 2)"] --> 
+        A3["Handling missing values<br/>(Step 3)"] --> 
+        A4["Encoding categorical data<br/>(Step 4)"] --> 
+        A5["Splitting data<br/>(Step 5)"] --> 
+        A6["Feature scaling<br/>(Step 6)"]
+    end
+
+    subgraph Modeling [Modeling]
+    direction LR
+        B1["Training ML algorithm<br/>(Step 7)"] --> 
+        B2["Trained Model<br/>(Step 8)"]
+    end
+
+    Preprocessing --> Modeling
+```
